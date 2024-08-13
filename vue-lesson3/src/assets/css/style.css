@@ -1,0 +1,17 @@
+main {
+    width: 700px;
+    margin: 0 auto;
+}
+
+/* GlobalMessage.vue */
+.ms-success {
+    padding: 10px;
+    color: white;
+    background-color: green;
+}
+
+.ms-error {
+    padding: 10px;
+    color: white;
+    background-color: red;
+}
