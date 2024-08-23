@@ -1,0 +1,153 @@
+@import "base.css";
+
+// App.vue
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-weight: 500;
+
+  .header {
+    .header-navigation {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+  }
+
+  main {
+    flex: 1 1 auto;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+// auth/RegistrationForm.vue
+.registration-form {
+  padding: 24px;
+  border-radius: 12px;
+  background-color: #abd1f3;
+
+  .registration-title {
+    text-align: center;
+  }
+
+  & > p {
+    margin-top: 10px;
+  }
+
+  .registration-email,
+  .registration-password {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  .registration-errors {
+    color: red;
+  }
+
+  .registration-submit {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// auth/RegistrationForm.vue
+.login-form {
+  padding: 24px;
+  border-radius: 12px;
+  background-color: #f54083;
+
+  .login-title {
+    text-align: center;
+  }
+
+  & > p {
+    margin-top: 10px;
+  }
+
+  .login-email,
+  .login-password {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  .login-errors {
+    color: red;
+  }
+
+  .login-submit {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// shop/AddProductForm.vue
+.new-product {
+  .errors {
+    color: red;
+  }
+}
+
+// other/DynamicField.vue
+.dynamic-field {
+  .red {
+    color: red
+  }
+
+  .blue {
+    color: blue
+  }
+
+  .green {
+    color: green
+  }
+}
+
+// other/CustomCreateForm.vue
+.custom-create-form {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #2c3e50;
+  box-shadow: #2c3e50;
+  background-color: #b9d4ef;
+
+  .custom-create-form-field {
+    input {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      padding: 0 10px;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+  }
+
+  .custom-create-form-button {
+    display: block;
+    width: 100%;
+    color: #f8f8f8;
+    background-color: #2c3e50;
+  }
+
+  .custom-create-form-selected {
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+}
+
+// other/CustomSelect.vue
+.custom-select {
+  label {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  select {
+    min-width: 67%;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+}

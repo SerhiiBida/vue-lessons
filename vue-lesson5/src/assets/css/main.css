@@ -1,0 +1,119 @@
+@import "base.css";
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-weight: 500;
+}
+#app .header .header-navigation {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+#app main {
+  flex: 1 1 auto;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.registration-form {
+  padding: 24px;
+  border-radius: 12px;
+  background-color: #abd1f3;
+}
+.registration-form .registration-title {
+  text-align: center;
+}
+.registration-form > p {
+  margin-top: 10px;
+}
+.registration-form .registration-email,
+.registration-form .registration-password {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+.registration-form .registration-errors {
+  color: red;
+}
+.registration-form .registration-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  padding: 24px;
+  border-radius: 12px;
+  background-color: #f54083;
+}
+.login-form .login-title {
+  text-align: center;
+}
+.login-form > p {
+  margin-top: 10px;
+}
+.login-form .login-email,
+.login-form .login-password {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+.login-form .login-errors {
+  color: red;
+}
+.login-form .login-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.new-product .errors {
+  color: red;
+}
+
+.dynamic-field .red {
+  color: red;
+}
+.dynamic-field .blue {
+  color: blue;
+}
+.dynamic-field .green {
+  color: green;
+}
+
+.custom-create-form {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #2c3e50;
+  box-shadow: #2c3e50;
+  background-color: #b9d4ef;
+}
+.custom-create-form .custom-create-form-field input {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 0 10px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.custom-create-form .custom-create-form-button {
+  display: block;
+  width: 100%;
+  color: #f8f8f8;
+  background-color: #2c3e50;
+}
+.custom-create-form .custom-create-form-selected {
+  padding-top: 5px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.custom-select label {
+  font-weight: bold;
+  font-size: 16px;
+}
+.custom-select select {
+  min-width: 67%;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=main.css.map */
