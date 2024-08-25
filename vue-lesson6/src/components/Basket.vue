@@ -8,6 +8,7 @@ export default {
     ...mapStores(useBasketStore),
   },
   mounted() {
+    // 5. Створіть дії для виклику мутацій та обробки асинхронних операцій.
     this.basketStore.uploadProducts();
   }
 }

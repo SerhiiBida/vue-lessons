@@ -1,4 +1,5 @@
 import {defineStore} from "pinia";
+import {useUserStore} from "@/stores/auth.js";
 
 
 // 2. Створіть свій перший store з базовим станом і декількома діями або мутаціями.
@@ -42,6 +43,12 @@ export const useBasketStore = defineStore("basket", {
             } catch (error) {
                 console.log(error);
             }
+        },
+        // 6. Створіть кілька stores та спробуйте їх комбінувати, доступаючись до одного store з іншого.
+        updateAccess() {
+            const userStore = useUserStore();
+
+            this.loading = userStore.isLoggedIn;
         }
     }
 });
