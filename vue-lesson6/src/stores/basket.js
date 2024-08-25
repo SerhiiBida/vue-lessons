@@ -12,24 +12,24 @@ export const useBasketStore = defineStore("basket", {
         }
     },
     getters: {
-        isBasket() {
-            return this.basket.length > 0;
+        isBasket: (state) => {
+            return state.basket.length > 0;
         },
-        isLoading() {
-            return this.loading;
+        isLoading: (state) => {
+            return state.loading;
         },
-        getBasket() {
-            return this.basket;
+        getBasket: (state) => {
+            return state.basket;
         },
-        getProductsOnPage() {
-            return this.productsOnPage;
+        getProductsOnPage: (state) => {
+            return state.productsOnPage;
         },
         // 7. Створіть селектори для вирахування похідних даних на основі стану.
-        maxProducts() {
-            return this.basket.length;
+        maxProducts: (state) => {
+            return state.basket.length;
         },
-        amountPages() {
-            return this.maxProducts ? Math.ceil(this.basket.length / this.productsOnPage) : 1;
+        amountPages: (state) => {
+            return this.maxProducts ? Math.ceil(state.basket.length / state.productsOnPage) : 1;
         }
     },
     actions: {

@@ -14,8 +14,8 @@ export const useUserStore = defineStore("user", {
         }
     },
     getters: {
-        isLoggedIn() {
-            return this.user.isLoggedIn;
+        isLoggedIn: (state) => {
+            return state.user.isLoggedIn;
         }
     }
 });
