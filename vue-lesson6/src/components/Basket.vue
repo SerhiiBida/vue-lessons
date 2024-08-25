@@ -21,9 +21,12 @@ export default {
       return this.basketStore.getBasket.slice(start, end);
     }
   },
-  mounted() {
+  async mounted() {
     // 5. Створіть дії для виклику мутацій та обробки асинхронних операцій.
-    this.basketStore.uploadProducts();
+    await this.basketStore.uploadProducts();
+
+    // 6. Створіть кілька stores та спробуйте їх комбінувати, доступаючись до одного store з іншого.
+    this.basketStore.updateAccess();
   }
 }
 </script>
