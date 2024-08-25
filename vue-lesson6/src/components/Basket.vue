@@ -33,7 +33,7 @@ export default {
           {{ product.description }}
         </template>
         <template v-slot:actions>
-          <v-btn class="basket-product-button-delete">
+          <v-btn class="basket-product-button-delete" @click="basketStore.deleteProduct(product.id)">
             Delete
           </v-btn>
         </template>
