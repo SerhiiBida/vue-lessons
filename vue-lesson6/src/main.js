@@ -1,14 +1,19 @@
-import './assets/main.css'
+import "./assets/main.css";
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import {createApp} from "vue";
+import {createPinia} from "pinia";
 
-import App from './App.vue'
-import router from './router'
+import App from "./App.vue";
+import router from "./router";
+import vuetify from "@/plugins/vuetify.js";
 
-const app = createApp(App)
 
-app.use(createPinia())
-app.use(router)
+export const pinia = createPinia();
 
-app.mount('#app')
+const app = createApp(App);
+
+// 1. Налаштуйте Pinia як стор.
+app.use(vuetify)
+    .use(pinia)
+    .use(router)
+    .mount("#app");

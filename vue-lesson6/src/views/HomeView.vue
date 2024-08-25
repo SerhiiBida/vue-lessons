@@ -1,13 +1,16 @@
 <script>
+import Home from "@/components/Home.vue";
+
 export default {
-  name: "Home"
+  name: "HomeView",
+  components: {
+    Home
+  }
 }
 </script>
 
 <template>
   <section>
-    <h1>
-      Home Page!
-    </h1>
+    <Home/>
   </section>
 </template>
