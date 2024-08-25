@@ -7,6 +7,7 @@ export const useBasketStore = defineStore("basket", {
     state: () => {
         return {
             basket: [],
+            productsOnPage: 6,
             loading: false
         }
     },
@@ -20,6 +21,16 @@ export const useBasketStore = defineStore("basket", {
         getBasket() {
             return this.basket;
         },
+        getProductsOnPage() {
+            return this.productsOnPage;
+        },
+        // 7. Створіть селектори для вирахування похідних даних на основі стану.
+        maxProducts() {
+            return this.basket.length;
+        },
+        amountPages() {
+            return this.maxProducts ? Math.ceil(this.basket.length / this.productsOnPage) : 1;
+        }
     },
     actions: {
         // 4. Створіть мутації для зміни стану в вашому store.
@@ -49,6 +60,9 @@ export const useBasketStore = defineStore("basket", {
             const userStore = useUserStore();
 
             this.loading = userStore.isLoggedIn;
+        },
+        getProductsPage(numberPage) {
+            console.log(numberPage)
         }
     }
 });

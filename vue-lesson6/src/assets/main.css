@@ -37,5 +37,9 @@
 .basket-products .basket-product .v-card-actions .basket-product-button-delete {
   color: red;
 }
+.basket-products .pagination-wrapper {
+  display: flex;
+  justify-content: center;
+}
 
 /*# sourceMappingURL=main.css.map */
