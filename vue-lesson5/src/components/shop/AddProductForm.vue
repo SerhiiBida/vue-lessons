@@ -73,13 +73,22 @@ export default {
     і навпаки.
   -->
   <section class="new-product">
-    <form action="#" class="new-product-form" @submit.prevent="addProduct">
+    <form
+        action="#"
+        class="new-product-form"
+        @submit.prevent="addProduct"
+    >
       <div class="new-product-fields">
         <div>
           <label for="name">
             Назва
           </label>
-          <input v-model="name" type="text" name="name" id="name">
+          <input
+              v-model="name"
+              type="text"
+              name="name"
+              id="name"
+          >
           <p class="errors">
             {{ nameError }}
           </p>
@@ -88,7 +97,12 @@ export default {
           <label for="price">
             Ціна
           </label>
-          <input v-model="price" type="number" name="price" id="price">
+          <input
+              v-model="price"
+              type="number"
+              name="price"
+              id="price"
+          >
           <p class="errors">
             {{ priceError }}
           </p>
@@ -97,7 +111,12 @@ export default {
           <label for="is-sell">
             Продається?
           </label>
-          <input v-model="isSell" type="checkbox" name="is-sell" id="is-sell">
+          <input
+              v-model="isSell"
+              type="checkbox"
+              name="is-sell"
+              id="is-sell"
+          >
         </div>
       </div>
       <div>

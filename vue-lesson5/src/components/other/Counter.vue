@@ -16,7 +16,12 @@ export default {
     значення лічильника.
     -->
   <section>
-    <input v-model="counter" type="number" name="counter" id="counter">
+    <input
+        v-model="counter"
+        type="number"
+        name="counter"
+        id="counter"
+    >
     <button @click="counter--">
       -
     </button>

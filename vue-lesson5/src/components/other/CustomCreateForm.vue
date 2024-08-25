@@ -30,7 +30,12 @@ export default {
     -->
     <CustomSelect :options="options" v-model="selectedOption"/>
     <div class="custom-create-form-field">
-      <input v-model="inputItem" type="text" name="input" id="input"/>
+      <input
+          v-model="inputItem"
+          type="text"
+          name="input"
+          id="input"
+      >
     </div>
     <button class="custom-create-form-button" @click="addItems">
       Add

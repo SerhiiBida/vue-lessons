@@ -15,6 +15,12 @@ export default {
     введених користувачем
   -->
   <section class="dynamic-field">
-    <input v-model="className" :class="className" type="text" name="className" id="className">
+    <input
+        v-model="className"
+        :class="className"
+        type="text"
+        name="className"
+        id="className"
+    >
   </section>
 </template>

@@ -1,14 +1,14 @@
 <script>
-import AuthFirebase from '@/servises/auth.js';
+import AuthFirebase from "@/servises/auth.js";
 
 export default {
   name: "RegistrationForm",
   data() {
     return {
       form: {
-        email: '',
-        password: '',
-        error: ''
+        email: "",
+        password: "",
+        error: ""
       }
     }
   },
@@ -31,7 +31,12 @@ export default {
 </script>
 
 <template>
-  <form action="#" method="post" class="registration-form" @submit.prevent="register">
+  <form
+      action="#"
+      method="post"
+      class="registration-form"
+      @submit.prevent="register"
+  >
     <h3 class="registration-title">
       Registration
     </h3>
@@ -39,13 +44,23 @@ export default {
       <label>
         Email:
       </label>
-      <input type="email" name="email" id="email" v-model="form.email">
+      <input
+          type="email"
+          name="email"
+          id="email"
+          v-model="form.email"
+      >
     </p>
     <p class="registration-password">
       <label>
         Password:
       </label>
-      <input type="password" name="password" id="password" v-model="form.password">
+      <input
+          type="password"
+          name="password"
+          id="password"
+          v-model="form.password"
+      >
     </p>
     <p class="registration-errors">
       {{ form.error }}

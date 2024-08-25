@@ -1,33 +1,37 @@
 <script>
-import AuthFirebase from '@/servises/auth.js';
+import AuthFirebase from "@/servises/auth.js";
 
 export default {
   name: "LoginForm",
   data() {
     return {
       form: {
-        email: '',
-        password: '',
-        error: ''
+        email: "",
+        password: "",
+        error: ""
       }
     }
   },
   methods: {
     outputError(error) {
-      switch (error.code) {
-        case 'auth/invalid-email':
-          this.form.error = 'Invalid email'
-          break
-        case 'auth/user-not-found':
-          this.form.error = 'No account with that email was found'
-          break
-        case 'auth/wrong-password':
-          this.form.error = 'Incorrect password'
-          break
-        default:
-          this.form.error = 'Email or password was incorrect'
-          break
+      const errorCode = error.code;
+
+      let errorMessage;
+
+      if (errorCode === "auth/invalid-email") {
+        errorMessage = "Invalid email";
+
+      } else if (errorCode === "auth/user-not-found") {
+        errorMessage = "No account with that email was found";
+
+      } else if (errorCode === "auth/wrong-password") {
+        errorMessage = "Incorrect password";
+
+      } else {
+        errorMessage = "Email or password was incorrect";
       }
+
+      this.form.error = errorMessage;
     },
     login() {
       const auth = new AuthFirebase();
@@ -44,7 +48,12 @@ export default {
 </script>
 
 <template>
-  <form action="#" method="post" class="login-form" @submit.prevent="login">
+  <form
+      action="#"
+      method="post"
+      class="login-form"
+      @submit.prevent="login"
+  >
     <h3 class="login-title">
       Authorization
     </h3>
@@ -52,13 +61,23 @@ export default {
       <label>
         Email:
       </label>
-      <input type="email" name="email" id="email" v-model="form.email">
+      <input
+          type="email"
+          name="email"
+          id="email"
+          v-model="form.email"
+      >
     </p>
     <p class="login-password">
       <label>
         Password:
       </label>
-      <input type="password" name="password" id="password" v-model="form.password">
+      <input
+          type="password"
+          name="password"
+          id="password"
+          v-model="form.password"
+      >
     </p>
     <p class="login-errors">
       {{ form.error }}

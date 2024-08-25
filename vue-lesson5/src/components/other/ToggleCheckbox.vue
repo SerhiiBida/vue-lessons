@@ -17,7 +17,12 @@ export default {
   -->
   <section>
     <p>
-      <input v-model="isToggle" type="checkbox" name="toggle-checkbox" id="toggle-checkbox">
+      <input
+          v-model="isToggle"
+          type="checkbox"
+          name="toggle-checkbox"
+          id="toggle-checkbox"
+      >
       {{ isToggle }}
     </p>
   </section>

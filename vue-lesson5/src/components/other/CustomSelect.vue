@@ -27,7 +27,11 @@ export default {
     <label for="select">
       Обрати
     </label>
-    <select name="select" id="select" @change="$emit('update:modelValue', $event.target.value)">
+    <select
+        name="select"
+        id="select"
+        @change="$emit('update:modelValue', $event.target.value)"
+    >
       <option v-for="option in options" :key="option" :value="option">
         {{ option }}
       </option>

@@ -18,10 +18,12 @@ export const pinia = createPinia();
 
 const app = createApp(App);
 
-app.use(vuetify);
-app.use(pinia);
-app.use(index);
+app.use(vuetify)
+    .use(pinia)
+    .use(index)
+    .mount("#app");
 
+// Firebase
 const firebaseConfig = {
     apiKey: env.FB_API_KEY,
     authDomain: env.FB_AUTH_DOMAIN,
@@ -46,6 +48,3 @@ const authFirebase = new AuthFirebase();
 
 // Наблюдатель за аутентификацией и ролью пользователя
 authFirebase.watcherAuthorizationAndRole();
-
-
-app.mount("#app");

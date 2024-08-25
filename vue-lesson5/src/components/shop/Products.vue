@@ -54,7 +54,11 @@ export default {
 
 <template>
   <section class="products">
-    <p v-for="product in products" :key="product.id" :data-product-id="product.id">
+    <p
+        v-for="product in products"
+        :key="product.id"
+        :data-product-id="product.id"
+    >
       {{ product.name }} - {{ product.price }}$ Продаж: {{ product.isSell }}
       <!--
         2. Створіть маршрут, який використовує динамічний параметр,
