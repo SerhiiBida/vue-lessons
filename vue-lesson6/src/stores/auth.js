@@ -6,7 +6,7 @@ export const useUserStore = defineStore("user", {
     state: () => {
         return {
             user: {
-                isLoggedIn: false,
+                isLoggedIn: true,
                 accessToken: "",
                 id: "",
                 email: ""

@@ -71,7 +71,6 @@ export default {
             :length="basketStore.amountPages"
             next-icon="mdi-menu-right"
             prev-icon="mdi-menu-left"
-            @click="basketStore.getProductsPage(currentPage)"
         >
         </v-pagination>
       </div>

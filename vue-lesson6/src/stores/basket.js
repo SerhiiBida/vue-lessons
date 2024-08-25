@@ -61,8 +61,5 @@ export const useBasketStore = defineStore("basket", {
 
             this.loading = userStore.isLoggedIn;
         },
-        getProductsPage(numberPage) {
-            console.log(numberPage)
-        }
     }
 });
