@@ -16,4 +16,26 @@
   margin: 0 auto;
 }
 
+.basket-products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  gap: 15px;
+}
+.basket-products .basket-product {
+  display: flex;
+  flex-direction: column;
+}
+.basket-products .basket-product .v-card-text {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+.basket-products .basket-product .v-card-actions {
+  margin-top: auto;
+}
+.basket-products .basket-product .v-card-actions .basket-product-button-delete {
+  color: red;
+}
+
 /*# sourceMappingURL=main.css.map */

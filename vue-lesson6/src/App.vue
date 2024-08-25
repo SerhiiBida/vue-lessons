@@ -10,6 +10,9 @@ export default {
       <RouterLink :to="{name: 'home'}">
         Home
       </RouterLink>
+      <RouterLink :to="{name: 'basket'}">
+        Basket
+      </RouterLink>
     </nav>
   </header>
 

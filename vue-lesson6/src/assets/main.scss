@@ -22,3 +22,30 @@
     }
   }
 }
+
+// Basket.vue
+.basket-products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  gap: 15px;
+
+  .basket-product {
+    display: flex;
+    flex-direction: column;
+
+    .v-card-text {
+      position: relative;
+      height: 100px;
+      overflow: hidden;
+    }
+
+    .v-card-actions {
+      margin-top: auto;
+
+      .basket-product-button-delete {
+        color: red;
+      }
+    }
+  }
+}
