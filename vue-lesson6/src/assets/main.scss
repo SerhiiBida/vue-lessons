@@ -1,0 +1,24 @@
+@import "./base.css";
+
+// App.vue
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  header {
+    nav {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+  }
+
+  main {
+    flex: 1 1 auto;
+
+    & > section {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+  }
+}
