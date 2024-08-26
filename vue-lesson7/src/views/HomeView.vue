@@ -2,13 +2,20 @@
 import HelloUser from "@/components/HelloUser.vue";
 import Message from "@/components/Message.vue";
 import NewMessage from "@/components/NewMessage.vue";
+import ModalWindow from "@/components/ModalWindow.vue";
 
 export default {
   name: "HomeView",
   components: {
+    ModalWindow,
     NewMessage,
     Message,
     HelloUser
+  },
+  data() {
+    return {
+      isShow: true
+    }
   }
 }
 </script>
@@ -65,5 +72,23 @@ export default {
         Old date: {{ defaultProps.dateOld }}
       </template>
     </NewMessage>
+    <!--
+      5. Стовріть слот для модального вікна за допомогою которого можно
+      будет встановлювати контент для хедера, футера та тіла.
+    -->
+    <ModalWindow v-model="isShow">
+      <template #title>
+        Information
+      </template>
+      <template #body>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cumque dolores facilis, ipsum maiores nostrum
+        provident similique veritatis.
+      </template>
+      <template #footer>
+        <button>
+          OK
+        </button>
+      </template>
+    </ModalWindow>
   </section>
 </template>
