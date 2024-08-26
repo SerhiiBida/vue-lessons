@@ -1,0 +1,19 @@
+@import "./base.css";
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#app header nav {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+#app main {
+  flex: 1 1 auto;
+}
+#app main > section {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=main.css.map */
