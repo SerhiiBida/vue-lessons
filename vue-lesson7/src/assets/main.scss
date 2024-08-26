@@ -92,3 +92,28 @@
     }
   }
 }
+
+// DirectivesView.vue
+.tooltip {
+  position: relative;
+
+  &:hover {
+
+    .tooltip-text {
+      display: block;
+      position: absolute;
+      padding: 5px;
+      bottom: 0;
+      right: 0;
+      transform: translate(100%, 100%);
+      color: white;
+      border-radius: 12px;
+      background-color: #2c3e50;
+      z-index: 1000;
+    }
+  }
+
+  .tooltip-text {
+    display: none;
+  }
+}
