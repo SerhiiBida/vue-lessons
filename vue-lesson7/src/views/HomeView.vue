@@ -3,10 +3,12 @@ import HelloUser from "@/components/HelloUser.vue";
 import Message from "@/components/Message.vue";
 import NewMessage from "@/components/NewMessage.vue";
 import ModalWindow from "@/components/ModalWindow.vue";
+import AddText from "@/components/AddText.vue";
 
 export default {
   name: "HomeView",
   components: {
+    AddText,
     ModalWindow,
     NewMessage,
     Message,
@@ -14,7 +16,8 @@ export default {
   },
   data() {
     return {
-      isShow: true
+      isShow: false,
+      newText: ""
     }
   }
 }
@@ -90,5 +93,10 @@ export default {
         </button>
       </template>
     </ModalWindow>
+    <!--6. Створіть базовий міксін, який додає декілька методів або даних у компонент.-->
+    <p>
+      {{ newText }}
+    </p>
+    <AddText v-model="newText"/>
   </section>
 </template>
